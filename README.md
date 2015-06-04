@@ -6,12 +6,15 @@ Checks whether cookie headers are received or not.
 
 ## Installation
 ```bash
-$ npm install electron-cookie-issues-repro
+$ hub clone yoshuawuyts/electron-cookie-issues-repro
 ```
 
 ## Usage
 ```sh
-$ npm start-server
+# start server
+$ npm run start-server
+
+# start electron
 $ npm start
 
 # manually verify if requests have properly gone through
