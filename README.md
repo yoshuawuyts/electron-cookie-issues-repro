@@ -4,6 +4,12 @@
 Repro for [atom/electron#1852](https://github.com/atom/electron/issues/1852).
 Checks whether cookie headers are received or not.
 
+_update: 05/06/2014_: It appears the only bug in `electron` is that `cookie`
+related headers aren't shown when fetching data. The actual data does come
+through. Be sure to set the `withCredentials` value when requesting data. The
+`window.fetch` api doesn't support cookies so we got use the `xhr` module
+instead.
+
 ## Installation
 ```bash
 $ hub clone yoshuawuyts/electron-cookie-issues-repro
