@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "start-server": "node server"
+    "start-server": "node server",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "yoshuawuyts/electron-cookie-issues-repro",
   "keywords": [],
@@ -13,7 +15,8 @@
   "dependencies": {
     "electron-cookies": "^1.1.0",
     "electron-prebuilt": "^0.27.2",
-    "nets": "^3.1.0"
+    "nets": "^3.1.0",
+    "snyk": "^1.30.1"
   },
   "devDependencies": {
     "istanbul": "^0.3.14",
@@ -24,5 +27,6 @@
     "LICENSE",
     "index.js",
     "README.md"
-  ]
+  ],
+  "snyk": true
 }
